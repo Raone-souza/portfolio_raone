@@ -1,0 +1,1026 @@
+/* estilização sem responsividade*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*                  para quem for ler o codigo por favor nao ligue para a bagunça
+                                    depois eu arrumo tudo ok :)
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f09c;
+    color: #333;
+    text-align: left;
+    background-color: #ffffffbb;
+    
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 0;
+    padding: 25px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    position: relative;
+    top: 0;
+    
+}
+
+
+main {
+    margin-top: 80px;
+}
+
+
+.hidden {
+    display: none; /* Oculta as seções inativas */
+  }
+
+  /* Todas as seções começam com transição suave */
+main section {
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Transição de opacidade suave */
+    display: none; /* Ocultas por padrão */
+  }
+  
+  /* Mostra a seção ativa */
+  main section.active {
+    opacity: 1; /* Totalmente visível */
+    display: block; /* Tornar visível */
+  }
+
+.logo {
+    font-size: 20px;
+    position: relative;
+    left: 40px;
+
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.role {
+    color: gray;
+    font-size: 14px;
+}
+
+nav a {
+    position: relative;
+    margin-left: 20px;
+    right: 40px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.menu__link {
+    color: #333;
+    line-height: 2;
+    position: relative;
+}
+
+.menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #2b2b2b;
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: right .4s, width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* From Uiverse.io by Zameerahmad01 */ 
+ul {
+    list-style: none;
+    position: absolute;
+    left: auto;
+    top: 40%;
+}
+
+.example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+}
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    transform: translateX(50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: 5px;
+}
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+.example-2 .icon-content a:hover {
+    color: white;
+}
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+    );
+}
+.example-2 .icon-content a[data-social="Gmail"] .filled,
+.example-2 .icon-content a[data-social="Gmail"] ~ .tooltip {
+    background-color: #ff0000;
+    right: -40px;
+    text-align: center;
+}
+
+
+.main-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    font-size: 80px;
+}
+
+.sub-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    position: relative;
+    top: 50px;
+    right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+
+
+.sobre_container {
+    max-width: 550px;
+    position: relative;
+    left: 300px;
+}
+  
+  .sobre_titulo {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #7c3aed;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .sobre_texto {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+  }
+  
+  .sobre_texto h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .sobre_texto p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .sobre_texto .link {
+    color: #0015d1;
+    text-decoration: none;
+  }
+  
+  .sobre_texto .link:hover {
+    text-decoration: underline;
+  }
+
+
+
+.sobre__habilidades {
+    max-width: 550px;
+    position: relative;
+    left: 1100px;
+    top: -650px;
+    font-size: 2rem;
+}
+
+
+
+
+/* From Uiverse.io by WAIOKYERE */
+#habilidades1{
+    top: 100px;
+}
+  
+  .example-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-1 .icon_content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-1 .icon_content .tooltips {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-1 .icon_content:hover .tooltips {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-1 .icon_content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    color: #4d4d4d;
+    background-color: #ffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-1 .icon_content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+  }
+  .example-1 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-1 .icon_content a:hover {
+    color: white;
+  }
+  .example-1 .icon_content a .fill {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-1 .icon_content a:hover .fill {
+    height: 100%;
+  }
+  .example-1 .icon_content a[data-social="HTM"] ~ .tooltips {
+    background-color: #24262a;
+  }
+  
+  .example-1 .icon_content a[data-social="CSS"] ~ .tooltips {
+    background-color: #24262a;
+  }
+  
+  .example-1 .icon_content a[data-social="GIT"] ~ .tooltips {
+    background-color:#24262a;
+  }
+  
+  .example-1 .icon_content a[data-social="GITHUB"] ~ .tooltips {
+    background-color: #24262a;
+  }
+
+
+
+  ul {
+    list-style: none;
+  }
+  
+  .example-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-3 .icon__content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-3 .icon__content .tooltipss {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-3 .icon__content:hover .tooltipss {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-3 .icon__content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    color: #4d4d4d;
+    background-color: #ffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-3 .icon__content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+  }
+  .example-3 .icon__content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-3 .icon__content a:hover {
+    color: white;
+  }
+  .example-3 .icon__content a .filll {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-3 .icon__content a:hover .filll {
+    height: 100%;
+  }
+  .example-3 .icon__content a[data-social="PYTHON"] ~ .tooltipss {
+    background-color: #24262a;
+  }
+  
+  .example-3 .icon__content a[data-social="PHP"] ~ .tooltipss {
+    background-color: #24262a;
+  }
+  
+  .example-3 .icon__content a[data-social="SQL"] ~ .tooltipss {
+    background-color: #24262a;
+  }
+  
+  .example-3 .icon__content a[data-social="MYSQL"] ~ .tooltipss {
+    background-color: #24262a;
+  }
+
+
+  #habilidades2{
+    top: 210px;
+}
+
+ul {
+    list-style: none;
+  }
+  
+  .example-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-4 .icon___content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-4 .icon___content .tooltipsss {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-4 .icon___content:hover .tooltipsss {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-4 .icon___content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    color: #4d4d4d;
+    background-color: #ffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-4 .icon___content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+  }
+  .example-4 .icon__content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-4 .icon___content a:hover {
+    color: white;
+  }
+  .example-4 .icon___content a .fillll {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-4 .icon___content a:hover .fillll {
+    height: 100%;
+  }
+  .example-4 .icon___content a[data-social="LINUX"] ~ .tooltipsss {
+    background-color: #24262a;
+  }
+  
+  .example-4 .icon___content a[data-social="DOCKER"] ~ .tooltipsss {
+    background-color: #24262a;
+  }
+  
+  .example-4 .icon___content a[data-social="TERMINAL"] ~ .tooltipsss {
+    background-color: #24262a;
+  }
+  
+  .example-4 .icon___content a[data-social="AWS"] ~ .tooltipsss {
+    background-color: #24262a;
+  }
+
+#habilidades3{
+    top: 310px;
+}
+
+
+ul {
+    list-style: none;
+  }
+  
+  .example-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-5 .icon____content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-5 .icon____content .tooltipssss {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 130px;
+  }
+  .example-5 .icon____content:hover .tooltipssss {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+    
+  }
+  .example-5 .icon____content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    color: #4d4d4d;
+    background-color: #ffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-5 .icon____content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+  }
+  .example-5 .icon____content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-5 .icon____content a:hover {
+    color: white;
+  }
+  .example-5 .icon____content a .filllll {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-5 .icon____content a:hover .filllll {
+    height: 100%;
+  }
+  
+  
+  .example-5 .icon____content a[data-social="VISUAL STUDIO CODE"] ~ .tooltipssss {
+    background-color: #24262a;
+  }
+  
+  .example-5 .icon____content a[data-social="VISUAL STUDIO"] ~ .tooltipssss {
+    background-color: #24262a;
+  }
+
+#habilidades4{
+    top: 420px;
+}
+
+
+
+/* design do certificados */
+
+.title-certificados{
+  text-align: center;
+  position: relative;
+  top: -50px;
+}
+
+.title-certificados h1{
+  font-size: 3.0rem;
+  font-weight: 600;
+}
+
+.title-certificados p {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+
+}
+
+.certificate {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  text-align: center; /* Centraliza o texto */
+  padding: 10px; /* Espaçamento interno */
+}
+
+.certificate:hover {
+  transform: scale(1.05);
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores */
+}
+
+.certificate a {
+  text-decoration: none;
+}
+
+.course-name {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.cont{
+  top: 50px;
+  position: relative;
+  left: 20%;
+  
+}
+
+
+/* projetos */
+.projects {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.projects__header {
+  text-align: center;
+  position: relative;
+  top: -50px;
+  
+}
+
+.projects__header h2 {
+  font-size: 3.5rem;
+  font-weight: 100;
+  
+}
+
+.projects__header p {
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+.projects__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.projects__item:hover .projects__image {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.projects__image {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects__details {
+  margin-left: 50px;
+  width: 60%;
+}
+
+.projects__details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.projects__details p {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #282936;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  top: -10px;
+  left: 40%;
+}
+
+.btn:hover {
+  background-color: #3f404e;
+}
+
+.frame {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.frame img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.frame__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5e5e;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.contatos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contatos .container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contatos h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contatos p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #7a57d1;
+  box-shadow: 0 0 5px rgba(122, 87, 209, 0.5);
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-enviar {
+  display: inline-block;
+  background: #282936;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  width: 150px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+  top: 0px;
+}
+
+.btn-enviar:hover {
+  background: #3f404e;
+}
+
+.contato_title {
+  position: relative;
+  top: -55px;
+}
+
+.contato_title h2{
+  font-size: 3.0rem;
+}
+.contato_title p{
+  font-size: 1.1rem;
+}
+
+.container{
+  position: relative;
+  top: -50px;
+}
