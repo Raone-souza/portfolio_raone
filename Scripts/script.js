@@ -1,5 +1,4 @@
 // efeito de digitação
-
 const carouselText1 = [
   { text: "Programador", color: "gray" },
   { text: "Desenvolvedor Back End", color: "gray" },
@@ -43,7 +42,7 @@ async function carousel(carouselList, eleRef, typeSpeed = 150, displayTime = 250
     await typeSentence(carouselList[i].text, eleRef, typeSpeed);
     await waitForMs(displayTime);
     await deleteSentence(eleRef, deleteSpeed);
-    await waitForMs(800); // Pausa extra para suavizar a transição
+    await waitForMs(800);
     i++;
     if (i >= carouselList.length) {
       i = 0;
