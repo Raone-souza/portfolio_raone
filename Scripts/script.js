@@ -2,7 +2,7 @@
 const carouselText1 = [
   { text: "Programador", color: "gray" },
   { text: "Desenvolvedor Back End", color: "gray" },
-  { text: "Desenvolvedor Full Stack", color: "gray" }
+  { text: "Desenvolvedor Junior", color: "gray" }
 ];
 
 const carouselText2 = [
